@@ -1,4 +1,4 @@
-public_html/*
+public_html/
 archives/
-bin/weewx/drivers/.git
+bin/weewx/drivers/.git/
 bin/weewx/drivers/swallow.py
