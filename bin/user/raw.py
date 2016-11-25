@@ -30,7 +30,8 @@ schema = [
     ('downfall', 'VARCHAR(5)'),
     ('illumination', 'INTEGER'),
     ('long_term_geiger', 'INTEGER'),
-    ('long_term_rain', 'REAL')
+    ('long_term_rain', 'REAL'),
+    ('maxWind', 'REAL')
     ]
 
 def get_default_binding_dict():

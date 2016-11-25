@@ -223,7 +223,7 @@ class RESTThread(threading.Thread):
                 # Presumably, this is exclusive of the archive record 60 minutes
                 # before, so the SQL statement is exclusive on the left, inclusive
                 # on the right.
-                _result = dbmanager.getSql("SELECT SUM(rain), MIN(usUnits), MAX(usUnits) FROM %s "
+                _result = dbmanager.getSql("SELECT SUM(deltarain), MIN(usUnits), MAX(usUnits) FROM %s "
                                          "WHERE dateTime>? AND dateTime<=?" % dbmanager.table_name,
                                          (_time_ts - 3600.0, _time_ts))
                 if _result is not None and _result[0] is not None:
@@ -253,7 +253,7 @@ class RESTThread(threading.Thread):
                 # (instead of the previous day). But, it's their site,
                 # so we'll do it their way.  That means the SELECT statement
                 # is inclusive on both time ends:
-                _result = dbmanager.getSql("SELECT SUM(rain), MIN(usUnits), MAX(usUnits) FROM %s "
+                _result = dbmanager.getSql("SELECT SUM(deltarain), MIN(usUnits), MAX(usUnits) FROM %s "
                                          "WHERE dateTime>=? AND dateTime<=?" % dbmanager.table_name, 
                                          (_sod_ts, _time_ts))
                 if _result is not None and _result[0] is not None:
