@@ -209,7 +209,7 @@ function choose(id) {
   <tr style='vertical-align:center'>
     <td class='metric_name'>WIND SPEED</td>
     <td class='metric_value' colspan='2' >$current.windSpeed.formatted</td>
-    <td class='metric_units'>$unit.label.windSpeed<td/>
+    <td class='metric_units'>$unit.label.windSpeed</td>
   </tr>
 
   <tr style='vertical-align:center'>
@@ -217,7 +217,13 @@ function choose(id) {
     <td class='metric_value' colspan='2'>$current.windDir.formatted</td>
     <td class='metric_units'>$current.windDir.ordinal_compass</td>
   </tr>
-  
+
+  <tr style='vertical-align:center'>
+    <td class='metric_name'>PRESSURE</td>
+    <td class='metric_value' colspan='2'>$current.pressure.formatted</td>
+    <td class='metric_units'>hPa</td>
+  </tr>
+
   <tr style='vertical-align:center'>
     <td class='metric_name'>RAIN</td>
     <td class='metric_value' colspan='2' >$hour.deltarain.sum.format('%.1f')</td>
@@ -308,7 +314,7 @@ function choose(id) {
       <span class="hilo_time">$month.wind.maxtime.format('%d/%m/%y')</span></td>
     <td><span class="metric_little_value">$year.wind.max.formatted</span><br/>
       <span class="hilo_time">$year.wind.maxtime.format('%d/%m/%y')</span></td>
-    <td class="metric_little_units">$unit.label.wind</td>
+    <td class="metric_little_units">$unit.label.windSpeed</td>
   </tr>
 
   <!-- total -->
@@ -379,45 +385,44 @@ function choose(id) {
         <img src="dayouthum.png" alt="humidity" />
         <img src="daygeiger.png" alt="geiger"/>
         <img src="daywind.png" alt="wind" />
-        <img src="daywinddir.png" alt="wind direction" />
         <img src="daywindvec.png" alt="wind vectors" />
+        <img src="daypressure.png" alt="pressure" />
         <img src="dayrain.png" alt="rain" />
         <img src="dayilluminance.png" alt="illuminance" />
         <img src="dayintemp.png" alt="intemperature" />
       </div>
 
-      <div id='graphs_week' class='data_graphs' style='display:none'>
+      <div id='graphs_week' class='data_graphs'>
         <img src="weekouttemp.png" alt="outtemperature" />
         <img src="weekouthum.png" alt="humidity" />
         <img src="weekgeiger.png" alt="geiger"/>
         <img src="weekwind.png" alt="wind" />
-        <img src="weekwinddir.png" alt="wind direction" />
         <img src="weekwindvec.png" alt="wind vectors" />
+        <img src="weekpressure.png" alt="pressure" />
         <img src="weekrain.png" alt="rain" />
         <img src="weekilluminance.png" alt="illuminance" />
         <img src="weekintemp.png" alt="intemperature" />
       </div>
 
-      <div id='graphs_month' class='data_graphs' style='display:none'>
-        <img src="monthintemp.png" alt="intemperature" />
+      <div id='graphs_month' class='data_graphs'>
         <img src="monthouttemp.png" alt="outtemperature" />
         <img src="monthouthum.png" alt="humidity" />
         <img src="monthgeiger.png" alt="geiger"/>
         <img src="monthwind.png" alt="wind" />
-        <img src="monthwinddir.png" alt="wind direction" />
         <img src="monthwindvec.png" alt="wind vectors" />
+        <img src="monthpressure.png" alt="pressure" />
         <img src="monthrain.png" alt="rain" />
         <img src="monthilluminance.png" alt="illuminance" />
         <img src="monthintemp.png" alt="intemperature" />
       </div>
 
-      <div id='graphs_year' class='data_graphs' style='display:none'>
+      <div id='graphs_year' class='data_graphs'>
         <img src="yearouttemp.png" alt="outtemperature" />
         <img src="yearouthum.png" alt="humidity" />
         <img src="yeargeiger.png" alt="geiger"/>
         <img src="yearwind.png" alt="wind" />
-        <img src="yearwinddir.png" alt="wind direction" />
         <img src="yearwindvec.png" alt="wind vectors" />
+        <img src="yearpressure.png" alt="pressure" />
         <img src="yearrain.png" alt="rain" />
         <img src="yearilluminance.png" alt="illuminance" />
         <img src="yearintemp.png" alt="intemperature" />
