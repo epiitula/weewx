@@ -84,9 +84,9 @@ class ScalarStats(object):
     def addSum(self, val, weight=1):
         """Add a scalar value to my running sum and count."""
         if val is not None:
-            self.sum     += val
+            self.sum     += float(val)
             self.count   += 1
-            self.wsum    += val * weight
+            self.wsum    += float(val) * weight
             self.sumtime += weight
         
     @property
